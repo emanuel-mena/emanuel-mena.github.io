@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Emanuel Mena" />
+    <link rel="manifest" href="/favicon/site.webmanifest" />
+
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+        integrity="sha384-tViUnnbYAV00FLIhhi3v/dWt3Jxw4gZQcNoSCxCIFNJVCx7/D55/wXsrNIRANwdD" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/gallery.css">
+
+
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.9.0-beta.1/lightgallery.umd.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/lightgallery@2.9.0-beta.1/css/lightgallery-bundle.min.css"
+        rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/three-js@79.0.0/three.min.js"></script>
+    <script src="js/index.js" type="module"></script>
+
+
+    <title>Emanuel Mena - Software Engineer</title>
+</head>
+
+<body>
+    <aside id="profile-aside">
+        <div id="pfp-container-0">
+            <img src="assets/img/profile_picture.png" alt="foto de perfil de Emanuel Mena Araya" class="pfp">
+        </div>
+
+        <h1>Emanuel Mena Araya</h1>
+        <h2>Ingeniero de Software <i class="bi bi-cpu"></i></h2>
+        <ul>
+
+            <li>
+                <a href="https://github.com/emanuel-mena">
+                    <i class="bi bi-github"></i>
+                    <i class="bi bi-code-slash"></i>
+                    <p>emanuel-mena</p>
+                </a>
+            </li>
+
+            <li>
+                <a href="https://github.com/EmanuelMenaCENFOTEC/EmanuelMenaCENFOTEC">
+                    <i class="bi bi-github"></i>
+                    <i class="bi bi-mortarboard"></i>
+                    <p>EmanuelMenaCENFOTEC</p>
+                </a>
+            </li>
+
+            <li>
+                <a href="https://www.linkedin.com/in/emanuel-mena-araya/">
+                    <i class="bi bi-linkedin"></i>
+                    <p>Emanuel Mena Araya</p>
+                </a>
+            </li>
+
+            <li>
+                <a href="https://www.instagram.com/eltiquillo9/">
+                    <i class="bi bi-instagram"></i>
+                    <p>Emanuel Mena Araya</p>
+                </a>
+            </li>
+
+            <li>
+                <a href="mailto:emena9215@gmail.com">
+                    <i class="bi bi-envelope-at-fill"></i>
+                    <p>emena9215@gmail.com</p>
+                </a>
+            </li>
+
+        </ul>
+    </aside>
+
+    <main>
+
+        <div id="btn-container">
+            <button class="tab-btn" id="about-me">Sobre Mi</button>
+            <button class="tab-btn" id="technical-skills">Habilidades Técnicas</button>
+            <button class="tab-btn" id="soft-skills">Habilidades Blandas</button>
+            <button class="tab-btn" id="work-experience">Experiencia Laboral</button>
+            <button class="tab-btn" id="academic-formation">Formación Académica</button>
+            <button class="tab-btn" id="portfolio">Portafolio</button>
+            <button class="tab-btn" id="proyect-gallery">Galeria</button>
+        </div>
+
+        <div id="content-container">
+            <section id="about-me-sct" class="tab-sct">
+                <h1>Sobre mí</h1>
+                <p>
+                    Mi nombre es <strong>Emanuel Mena Araya</strong>, estudiante de <strong>Ingeniería de
+                        Software</strong> en la <strong>Universidad CENFOTEC</strong>. A lo largo de mi formación
+                    académica y mis proyectos personales, he desarrollado una pasión firme por transformar ideas
+                    complejas en soluciones tecnológicas reales y funcionales.
+                </p>
+
+                <p>
+                    Me considero un <strong>creador multifacético</strong>, con intereses que abarcan desde el
+                    desarrollo de aplicaciones web y de escritorio hasta la programación de sistemas embebidos. Trabajo
+                    con lenguajes como <strong>Java, JavaScript, C#, Python, C y C++</strong>, y disfruto especialmente
+                    los proyectos que combinan <strong>software y hardware</strong>. Mi experiencia incluye el diseño de
+                    interfaces intuitivas, la construcción de APIs robustas, y el desarrollo con <strong>ESP32 y otros
+                        microcontroladores</strong>, utilizando herramientas como <strong>ESP-IDF, Arduino, PlatformIO,
+                        CircuitPython y MicroPython</strong>.
+                </p>
+
+                <p>
+                    Además de mis habilidades técnicas, tengo una fuerte inclinación por la <strong>experimentación, el
+                        prototipado y el aprendizaje autodidacta</strong>. He desarrollado desde sistemas web para
+                    gestión de inversiones, hasta herramientas de red, robots autónomos y editores de código
+                    interactivos. Me entusiasma explorar nuevas tecnologías y frameworks, integrarlos en mis proyectos y
+                    compartir ese conocimiento con los demás.
+                </p>
+
+                <p>
+                    Más allá del código, soy un <strong>geek orgulloso</strong>. Me apasionan los cómics, las novelas
+                    gráficas, la ciencia ficción y los videojuegos. Encuentro inspiración en mundos imaginarios y en las
+                    preguntas que despiertan sobre el futuro de la tecnología y la humanidad. Esta combinación de
+                    creatividad, curiosidad y disciplina me impulsa a abordar cada proyecto como una nueva aventura,
+                    donde el conocimiento se convierte en herramienta para construir algo significativo.
+                </p>
+
+                <p>
+                    Si algo me define, es la <strong>constante búsqueda de mejora</strong>: mejorar mis habilidades, mis
+                    herramientas y las soluciones que diseño. Mi portafolio es solo una muestra de esa filosofía en
+                    acción, y cada línea de código que escribo refleja mi compromiso con la excelencia, la exploración y
+                    la innovación.
+                </p>
+            </section>
+
+
+            <section id="technical-skills-sct" class="tab-sct">
+                <h1>Habilidades Técnicas</h1>
+                <ul>
+                    <li>
+                        <h2>Lenguajes de Programación</h2>
+                        <ul>
+                            <li>
+                                <img src="assets/img/icons/programming_lenguages/C_logo.svg"
+                                    alt="C's logo (programming lenguage)" class="comp-logo">
+                                <h2>C</h2>
+                            </li>
+
+                            <li>
+                                <img src="assets/img/icons/programming_lenguages/C++_logo.svg"
+                                    alt="C++'s logo (programming lenguage)" class="comp-logo">
+                                <h2>C++</h2>
+                            </li>
+
+                            <li>
+                                <img src="assets/img/icons/programming_lenguages/Python_logo_(icon_only).svg"
+                                    alt="Python's logo (programming lenguage)" class="comp-logo">
+                                <h2>Python</h2>
+                            </li>
+
+                            <li>
+                                <img src="assets/img/icons/programming_lenguages/Java_programming_language_logo.svg"
+                                    alt="Oracle's Java Logo" class="comp-logo">
+                                <h2>Java</h2>
+                            </li>
+
+                            <li>
+                                <img src="assets/img/icons/programming_lenguages/Csharp_logo.svg" alt="C sharp's logo"
+                                    class="comp-logo">
+                                <h2>C#</h2>
+                            </li>
+
+                            <li>
+                                <img src="assets/img/icons/programming_lenguages/js.svg" alt="JavaScript's logo"
+                                    class="comp-logo">
+                                <h2>JavaScript</h2>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <h2>Frameworks</h2>
+                        <ul>
+                            <li>
+                                <img src="assets/img/icons/frameworks/aframe-logo.png" alt="A-FRAMES's logo"
+                                    class="comp-logo">
+                                <h2>A-FRAME</h2>
+                            </li>
+
+                            <li>
+                                <img src="assets/img/icons/frameworks/PlatformIO_logo.svg" alt="PlatformIO's logo"
+                                    class="comp-logo">
+                                <h2>PlatformIO</h2>
+                            </li>
+
+                            <li>
+                                <img src="assets/img/icons/frameworks/Espressif_Logo.svg" alt="Espressifs systems logo"
+                                    class="comp-logo">
+                                <h2>Espressif-IDF</h2>
+                            </li>
+
+                            <li>
+                                <img src="assets/img/icons/frameworks/arduino_logo.svg" alt="Arduino's logo"
+                                    class="comp-logo">
+                                <h2>Arduino Framework</h2>
+                            </li>
+
+
+                            <li>
+                                <img src="assets/img/icons/frameworks/dot_net.svg" alt=".NET logo" class="comp-logo">
+                                <h2>.NET / ASP.NET</h2>
+                            </li>
+
+                            <li>
+                                <img src="assets/img/icons/frameworks/React-icon.svg" alt="React's logo"
+                                    class="comp-logo">
+                                <h2>React</h2>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <h2>Herramientas de Software</h2>
+                        <ul>
+                            <li>
+                                <img src="assets/img/icons/tools/Visual_Studio_Code_1.35_icon.svg"
+                                    alt="Visual Studio Code's logo" class="comp-logo">
+                                <h2>Visual Studio Code</h2>
+                            </li>
+
+                            <li>
+                                <img src="assets/img/icons/tools/Visual_Studio_Icon_2022.svg" alt="Visual Studio's logo"
+                                    class="comp-logo">
+                                <h2>Visual Studio</h2>
+                            </li>
+
+                            <li>
+                                <img src="assets/img/icons/tools/intellij-idea.svg" alt="IntelliJ IDEA icon"
+                                    class="comp-logo">
+                                <h2>JetBrains IntelliJ IDEA</h2>
+                            </li>
+
+                            <li>
+                                <img src="assets/img/icons/tools/clion.svg" alt="CLion's logo" class="comp-logo">
+                                <h2>JetBrains CLion</h2>
+                            </li>
+
+                            <li>
+                                <img src="assets/img/icons/tools/8thWall_logo.svg" alt="8thWall's icon"
+                                    class="comp-logo">
+                                <h2>8thWall</h2>
+                            </li>
+
+                            <li>
+                                <img src="assets/img/icons/tools/Unity_2021.svg" alt="Unity's Icon" class="comp-logo">
+                                <h2>Unity</h2>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <h2>Herramientas Miscelaneas</h2>
+                        <ul>
+                            <li>
+                                <img src="assets/img/icons/misc/Node.js_logo.svg" alt="Node.js logo" class="comp-logo">
+                                <h2>Node.js</h2>
+                            </li>
+
+                            <li>
+                                <img src="assets/img/icons/misc/adafruit_blinka_angles-right.svg"
+                                    alt="Adafruit's CircuitPython Blinka Macot!" class="comp-logo">
+                                <h2>CircuitPython</h2>
+                            </li>
+
+                            <li>
+                                <img src="assets/img/icons/misc/llinux.png" alt="Tux the penguin" class="comp-logo">
+                                <h2>Linux</h2>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+
+            <section id="soft-skills-sct" class="tab-sct">
+                <h1>Habilidades Blandas</h1>
+                <ul>
+                    <li>
+                        <h2>Resolución de problemas complejos</h2>
+                    </li>
+
+                    <li>
+                        <h2>Pensamiento creativo e innovación</h2>
+                    </li>
+
+                    <li>
+                        <h2>Autodidacta y aprendizaje continuo</h2>
+                    </li>
+
+                    <li>
+                        <h2>Proactividad y trabajo en equipo</h2>
+                    </li>
+
+                    <li>
+                        <h2>Paciencia y orientación educativa</h2>
+                    </li>
+
+                </ul>
+            </section>
+
+            <section id="work-experience-sct" class="tab-sct">
+                <h1>Experiencia Laboral</h1>
+                <ul>
+
+                    <li>
+                        <h2>Desarrollador XR - Museo de los Niños — 2024 - En Curso</h2>
+                        <ul>
+                            <li>
+                                <p>Desarrollo de experiencia 'Los Juguetes del Parqueo'.</p>
+                            </li>
+
+                            <li>
+                                <p>Desarrollo de experiencia 'Mundo Aventura'.</p>
+                            </li>
+                        </ul>
+                    </li>
+
+
+                    <li>
+                        <h2>Colaborador en CENFOBOT - Universidad CENFOTEC - 2024 - En Curso</h2>
+
+                        <ul>
+                            <li>
+                                <p>Atención a estudiantes de secundaria en temas de programación y electrónica.</p>
+                            </li>
+
+                            <li>
+                                <p>Desarrollo de software para robots SumoBot.</p>
+                            </li>
+
+                            <li>
+                                <p>Diseño de chasis y componentes personalizados para robótica educativa.</p>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+
+            <section id="academic-formation-sct" class="tab-sct">
+
+
+                <div class="academic-formation-content">
+                    <h1>Formación Academica</h1>
+                    <p>Liceo de Tabarcia — Bachiller en Educación Media (Graduado 2023)</p>
+                    <div class="gallery-2x2-wrapper">
+                        <div id="high-school-gallery" class="dynamic-2x2-gallery">
+                            <a href="assets/img/webp_output/yaba_Taba.webp" class="gallery-item master-item">
+                                <img src="assets/img/webp_output/yaba_Taba.webp" class="master-gallery-thumb"
+                                    alt="Descripción de la imagen">
+                            </a>
+
+                            <a href="assets/img/webp_output/graduacion_tabarcia.webp" class="gallery-item wide-item">
+                                <img src="assets/img/webp_output/graduacion_tabarcia.webp" class="wide-gallery-thumb"
+                                    alt="Graduación">
+                            </a>
+
+                            <a href="assets/img/webp_output/mvp.webp" class="gallery-item third-item">
+                                <img src="assets/img/webp_output/mvp.webp" class="third-gallery-thumb" alt="MVP">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="academic-formation-content">
+                    <h1>Formación Adicional</h1>
+                    <p>Universidad CENFOTEC — Bachillerato en Ingeniería de Software (En curso)</p>
+
+                    <div class="gallery-2x2-wrapper">
+                        <div id="high-school-gallery" class="dynamic-2x2-gallery">
+                            <a href="assets/img/webp_output/ttt_2024.webp" class="gallery-item master-item">
+                                <img src="assets/img/webp_output/ttt_2024.webp" class="master-gallery-thumb"
+                                    alt="Descripción de la imagen">
+                            </a>
+
+                            <a href="assets/img/webp_output/makerfaire_guanacaste__buddies.webp"
+                                class="gallery-item wide-item">
+                                <img src="assets/img/webp_output/makerfaire_guanacaste__buddies.webp"
+                                    class="wide-gallery-thumb" alt="Graduación">
+                            </a>
+
+                            <a href="assets/img/webp_output/ayuda_taller_contraloria.webp"
+                                class="gallery-item third-item">
+                                <img src="assets/img/webp_output/ayuda_taller_contraloria.webp"
+                                    class="third-gallery-thumb" alt="MVP">
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <section id="portfolio-sct" class="tab-sct">
+
+                <div>
+                    <h1>Colaborador del Proyecto CENFOBOT - Universidad CENFOTEC</h1>
+
+                    <p>
+                        Desde 2024 colaboro de manera activa en el desarrollo del proyecto <strong>CENFOBOT</strong> en
+                        la Universidad CENFOTEC, he hecho invesigaciones, elaborado código y apoyado en el diseño continuo y evolución del proyecto
+                    </p>
+
+                    <p>
+                        <strong>fun fact: yo hice el rediseño para la competencia del 2025!</strong>
+                    </p>
+                    
+                    <p>
+                        He brindado formación y acompañamiento a estudiantes de secundaria, investigadores
+                        independientes,
+                        voluntarios del programa IBM Mentors y docentes del Ministerio de Educación Pública (MEP). Mis
+                        intervenciones abarcan desde la configuración y el montaje de los componentes físicos hasta la
+                        programación y optimización del software.
+                    </p>
+
+                    <p>
+                        Además, he prestado soporte técnico en vivo durante la Maker Faire San José 2024, Maker Faire
+                        Guanacaste 2025 y Maker Faire San José 2025, asistiendo en la programación y reparación de
+                        robots
+                        para la competencia de SumoBot.
+                    </p>
+
+                    <div class="generic-gallery">
+                        <a href="assets/img/webp_output/first_sumobot_2024.webp">
+                            <img src="assets/img/webp_output/first_sumobot_2024.webp" alt="Primer Sumobot 2024">
+                        </a>
+                        <a href="assets/img/webp_output/mi_sumobot.webp">
+                            <img src="assets/img/webp_output/mi_sumobot.webp" alt="Mi Sumobot">
+                        </a>
+                        <a href="assets/img/webp_output/makerfaire_guana.webp">
+                            <img src="assets/img/webp_output/makerfaire_guana.webp" alt="Maker Faire Guanacaste">
+                        </a>
+                        <a href="assets/img/webp_output/makerfaire_guanacaste__buddies.webp">
+                            <img src="assets/img/webp_output/makerfaire_guanacaste__buddies.webp"
+                                alt="Equipo en Maker Faire Guanacaste">
+                        </a>
+                        <a href="assets/img/webp_output/ayuda_cole_2024.webp">
+                            <img src="assets/img/webp_output/ayuda_cole_2024.webp" alt="Capacitación a colegio 2024">
+                        </a>
+                        <a href="assets/img/webp_output/ayuda_sumobot_cole_catolico_femenino.webp">
+                            <img src="assets/img/webp_output/ayuda_sumobot_cole_catolico_femenino.webp"
+                                alt="Sumobot en colegio femenino">
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h1>Colaborador del MakerSpace - Universidad CENFOTEC</h1>
+
+                    <p>
+                        Desde 2024 formo parte del equipo del <strong>MakerSpace</strong> de la Universidad CENFOTEC,
+                        participando en procesos de impresión 3D, corte láser y diseño de prototipos. Los objetos
+                        producidos
+                        en el laboratorio se utilizan en eventos institucionales, materiales de mercadeo, trofeos, etc.
+                    </p>
+
+                    <p>
+                        He proporcionado asesoría técnica a estudiantes universitarios y de secundaria en proyectos de
+                        electrónica aplicada, tanto para asignaturas académicas como para competencias como ExpoCENFO.
+                    </p>
+
+                    <div class="generic-gallery">
+                        <a href="assets/img/webp_output/aba_taller.webp">
+                            <img src="assets/img/webp_output/aba_taller.webp" alt="Taller en MakerSpace">
+                        </a>
+                        <a href="assets/img/webp_output/gira_cole.webp">
+                            <img src="assets/img/webp_output/gira_cole.webp" alt="Visita de colegio al MakerSpace">
+                        </a>
+                        <a href="assets/img/webp_output/corte_laser.webp">
+                            <img src="assets/img/webp_output/corte_laser.webp" alt="Demostración de corte láser">
+                        </a>
+
+                        <a href="assets/img/webp_output/MakerSpace.webp">
+                            <img src="assets/img/webp_output/MakerSpace.webp" alt="">
+                        </a>
+                        <a href="assets/img/webp_output/tabarcia_cenfotec_❤️.webp">
+                            <img src="assets/img/webp_output/tabarcia_cenfotec_❤️.webp"
+                                alt="Proyecto Tabarcia en CENFOTEC">
+                        </a>
+                        <a href="assets/img/webp_output/angel_sumobot.webp">
+                            <img src="assets/img/webp_output/angel_sumobot.webp" alt="Angel con Sumobot">
+                        </a>
+                        <a href="assets/img/webp_output/microbuddies.webp">
+                            <img src="assets/img/webp_output/microbuddies.webp" alt="MicroBuddies en MakerSpace">
+                        </a>
+
+                        <a href="assets/img/webp_output/laser.webp">
+                            <img src="assets/img/webp_output/laser.webp" alt="MicroBuddies en MakerSpace">
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+
+            <section id="proyect-gallery-sct" class="tab-sct">
+                <div id="gallery">
+
+                    <!--1-->
+                    <a href="assets/img/webp_output/aba_taller.webp">
+                        <img src="assets/img/webp_output/aba_taller.webp" alt="">
+                    </a>
+
+
+                    <!--2-->
+                    <a href="assets/img/webp_output/makerfaire_guanacaste__buddies.webp">
+                        <img src="assets/img/webp_output/makerfaire_guanacaste__buddies.webp" alt="">
+                    </a>
+
+
+                    <!--3-->
+                    <a href="assets/img/webp_output/ayuda_sumobot_cole_catolico_femenino.webp">
+                        <img src="assets/img/webp_output/ayuda_sumobot_cole_catolico_femenino.webp" alt="">
+                    </a>
+
+
+                    <!--4-->
+                    <a href="assets/img/webp_output/ayuda_sumobot_guana.webp">
+                        <img src="assets/img/webp_output/ayuda_sumobot_guana.webp" alt="">
+                    </a>
+
+                    <!--5-->
+                    <a href="assets/img/webp_output/ayuda_taller_contraloria.webp">
+                        <img src="assets/img/webp_output/ayuda_taller_contraloria.webp" alt="">
+                    </a>
+
+
+                    <!--6-->
+                    <a href="assets/img/webp_output/beca_buddies.webp">
+                        <img src="assets/img/webp_output/beca_buddies.webp" alt="">
+                    </a>
+
+
+                    <!--7-->
+                    <a href="assets/img/webp_output/bffs.webp">
+                        <img src="assets/img/webp_output/bffs.webp" alt="">
+                    </a>
+
+
+                    <!--8-->
+                    <a href="assets/img/webp_output/colaborador_del_imperio.webp">
+                        <img src="assets/img/webp_output/colaborador_del_imperio.webp" alt="">
+                    </a>
+
+
+                    <!--9-->
+                    <a href="assets/img/webp_output/corte_laser.webp">
+                        <img src="assets/img/webp_output/corte_laser.webp" alt="">
+                    </a>
+
+
+                    <!--10-->
+                    <a href="assets/img/webp_output/first_sumobot_2024.webp">
+                        <img src="assets/img/webp_output/first_sumobot_2024.webp" alt="">
+                    </a>
+
+
+                    <!--11-->
+                    <a href="assets/img/webp_output/gira_cole.webp">
+                        <img src="assets/img/webp_output/gira_cole.webp" alt="">
+                    </a>
+
+
+                    <!--12-->
+                    <a href="assets/img/webp_output/graduacion_tabarcia.webp">
+                        <img src="assets/img/webp_output/graduacion_tabarcia.webp" alt="">
+                    </a>
+
+
+                    <!--13-->
+                    <a href="assets/img/webp_output/makerfaire_guana.webp">
+                        <img src="assets/img/webp_output/makerfaire_guana.webp" alt="">
+                    </a>
+
+
+                    <!--14-->
+                    <a href="assets/img/webp_output/ayuda_cole_2024.webp">
+                        <img src="assets/img/webp_output/ayuda_cole_2024.webp" alt="">
+                    </a>
+
+                    <!--15-->
+                    <a href="assets/img/webp_output/microbuddies.webp">
+                        <img src="assets/img/webp_output/microbuddies.webp" alt="">
+                    </a>
+
+
+                    <!--16-->
+                    <a href="assets/img/webp_output/angel_sumobot.webp">
+                        <img src="assets/img/webp_output/angel_sumobot.webp" alt="">
+                    </a>
+
+
+                    <!--17-->
+                    <a href="assets/img/webp_output/ttt_2024.webp">
+                        <img src="assets/img/webp_output/ttt_2024.webp" alt="">
+                    </a>
+
+
+                    <!--18-->
+                    <a href="assets/img/webp_output/taller_guanacaste_I.webp">
+                        <img src="assets/img/webp_output/taller_guanacaste_I.webp" alt="">
+                    </a>
+
+
+                    <!--19-->
+                    <a href="assets/img/webp_output/tabarcia_cenfotec_❤️.webp">
+                        <img src="assets/img/webp_output/tabarcia_cenfotec_❤️.webp" alt="">
+                    </a>
+
+                    <!--20-->
+                    <a href="assets/img/webp_output/taller_guanacaste_II.webp">
+                        <img src="assets/img/webp_output/taller_guanacaste_II.webp" alt="">
+                    </a>
+
+                    <!--21-->
+                    <a href="assets/img/webp_output/yaba_Taba.webp">
+                        <img src="assets/img/webp_output/yaba_Taba.webp" alt="">
+                    </a>
+
+                    <!--22-->
+                    <a href="assets/img/webp_output/mvp.webp">
+                        <img src="assets/img/webp_output/mvp.webp" alt="">
+                    </a>
+
+                    <!--23-->
+                    <a href="assets/img/webp_output/mi_sumobot.webp">
+                        <img src="assets/img/webp_output/mi_sumobot.webp" alt="">
+                    </a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+</body>
+
+</html>

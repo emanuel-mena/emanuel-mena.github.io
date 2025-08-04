@@ -1,0 +1,482 @@
+:root {
+    --yellow: #FBFF12;
+    --yellow-soft: #FFF94D;
+    --tiffany-blue: #99E1D9;
+    --tiffany-soft: #B8EAE4;
+    --black: #000000;
+    --crayon-pink: #F7567C;
+    --pink-soft: #FF8FA3;
+    --white: #FCFCFC;
+    --gray-light: #f8f9fa;
+    --gray-medium: #e9ecef;
+    --gray-dark: #495057;
+    --gray-darker: #343a40;
+    
+    /* Gradientes sutiles */
+    --accent-gradient: linear-gradient(135deg, var(--crayon-pink), var(--pink-soft));
+    --subtle-gradient: linear-gradient(135deg, var(--white) 0%, var(--gray-light) 100%);
+    --shadow-subtle: rgba(73, 80, 87, 0.08);
+    --shadow-hover: rgba(73, 80, 87, 0.15);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    background-color: var(--white);
+    color: var(--gray-darker);
+    line-height: 1.6;
+    overflow: hidden;
+    font-family: "Roboto", sans-serif;
+}
+
+p, h1, h2, h3, li {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+}
+
+strong{
+    font-weight: 600;
+    color: var(--black);
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+    color: var(--gray-darker);
+    position: relative;
+}
+
+h1::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background: var(--crayon-pink);
+    border-radius: 1px;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    color: var(--gray-dark);
+    position: relative;
+    padding-left: 1rem;
+}
+
+h2::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 3px;
+    height: 60%;
+    background: var(--tiffany-blue);
+    border-radius: 2px;
+}
+
+p {
+    margin-bottom: 1rem;
+    color: var(--black);
+}
+
+/* Aside Styles */
+aside {
+    height: 100vh;
+    width: 20vw;
+    background: var(--black);
+    color: var(--white);
+    padding: 2rem;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    box-shadow: 2px 0 15px var(--shadow-subtle);
+}
+
+aside p{
+    color: var(--white);
+}
+
+/* Contenedor de la foto de perfil */
+#pfp-container-0 {
+    aspect-ratio: 1;
+    width: 100%;
+    margin: 0 auto 1.5rem;
+    border: 3px solid var(--tiffany-blue);
+    border-radius: 50%;
+    padding: 4px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 8px 25px var(--shadow-subtle);
+    transition: all 0.3s ease;
+}
+
+#pfp-container-0:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 35px var(--shadow-hover);
+    border-color: var(--yellow);
+}
+
+/* Estilo para la imagen de perfil */
+.pfp {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+}
+
+aside h1 {
+    color: var(--white);
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+aside h1::after {
+    background: var(--yellow);
+    width: 40px;
+    height: 2px;
+}
+
+aside h2 {
+    color: var(--tiffany-soft);
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    font-weight: 400;
+    padding-left: 0;
+}
+
+aside h2::before {
+    display: none;
+}
+
+aside ul {
+    width: 100%;
+    list-style: none;
+}
+
+aside ul li {
+    margin-bottom: 1rem;
+}
+
+aside ul li a {
+    color: var(--white);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 0.75rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+aside ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: translateX(5px);
+    color: var(--yellow);
+}
+
+aside ul li a i {
+    margin-right: 0.75rem;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+aside ul li a:hover i {
+    color: var(--yellow);
+}
+
+aside ul li a p {
+    margin-bottom: 0;
+    font-weight: 500;
+}
+
+/* Main Content Styles */
+main {
+    width: 80vw;
+    margin-left: 20vw;
+    padding: 2rem;
+    overflow: hidden;
+}
+
+/* Tab Buttons */
+#btn-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--gray-medium);
+}
+
+.tab-btn {
+    padding: 0.75rem 1.5rem;
+    background-color: var(--white);
+    border: 1px solid var(--gray-medium);
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    color: var(--gray-dark);
+    box-shadow: 0 2px 4px var(--shadow-subtle);
+}
+
+.tab-btn:hover {
+    background-color: var(--gray-light);
+    color: var(--gray-darker);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px var(--shadow-hover);
+}
+
+.tab-btn.active {
+    background: var(--accent-gradient);
+    color: var(--white);
+    border-color: var(--crayon-pink);
+    box-shadow: 0 4px 12px rgba(247, 86, 124, 0.2);
+}
+
+/* Tab Content */
+#content-container {
+    width: 100%;
+    height: calc(90vh - 3rem);
+    overflow-y: auto;
+    padding-right: 1rem;
+}
+
+.tab-sct {
+    display: none;
+    animation: fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Technical Skills Section */
+#technical-skills-sct ul {
+    list-style: none;
+}
+
+#technical-skills-sct ul > li {
+    margin-bottom: 2rem;
+}
+
+#technical-skills-sct ul ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+#technical-skills-sct ul ul li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--subtle-gradient);
+    padding: 2rem 1.5rem;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    border: 1px solid var(--gray-medium);
+    box-shadow: 0 4px 12px var(--shadow-subtle);
+}
+
+#technical-skills-sct ul ul li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px var(--shadow-hover);
+    border-color: var(--tiffany-blue);
+}
+
+.comp-logo {
+    height: 80px;
+    width: auto;
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease;
+}
+
+#technical-skills-sct ul ul li:hover .comp-logo {
+    transform: scale(1.05);
+}
+
+/* Soft Skills Section */
+#soft-skills-sct ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
+    gap: 1.5rem;
+}
+
+#soft-skills-sct ul li {
+    background: var(--subtle-gradient);
+    padding: 1.5rem;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    border-left: 4px solid var(--gray-medium);
+    box-shadow: 0 4px 12px var(--shadow-subtle);
+}
+
+#soft-skills-sct ul li:nth-child(odd) {
+    border-left-color: var(--tiffany-blue);
+}
+
+#soft-skills-sct ul li:nth-child(even) {
+    border-left-color: var(--yellow);
+}
+
+#soft-skills-sct ul li:hover {
+    background-color: var(--tiffany-soft);
+    color: var(--gray-darker);
+    border-left-color: var(--crayon-pink);
+    transform: translateX(8px);
+    box-shadow: 0 8px 25px var(--shadow-hover);
+}
+
+/* Work Experience Section */
+#work-experience-sct ul {
+    list-style: none;
+}
+
+#work-experience-sct ul > li {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    border-radius: 12px;
+    background: var(--subtle-gradient);
+    border-left: 4px solid var(--crayon-pink);
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px var(--shadow-subtle);
+}
+
+#work-experience-sct ul > li:hover {
+    transform: translateX(5px);
+    box-shadow: 0 8px 25px var(--shadow-hover);
+    border-left-color: var(--yellow);
+}
+
+#work-experience-sct ul ul {
+    margin-top: 1rem;
+    padding-left: 1.5rem;
+}
+
+#work-experience-sct ul ul li {
+    margin-bottom: 0.5rem;
+    position: relative;
+}
+
+#work-experience-sct ul ul li::before {
+    content: "•";
+    color: var(--crayon-pink);
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+    font-size: 0.9rem;
+}
+
+/* Academic Formation Section */
+#academic-formation-sct > p {
+    margin-bottom: 2rem;
+    padding: 0rem;
+    background: var(--subtle-gradient);
+    border-radius: 12px;
+    border-left: 4px solid var(--tiffany-blue);
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px var(--shadow-subtle);
+}
+
+#academic-formation-sct > p:hover {
+    transform: translateX(5px);
+    box-shadow: 0 8px 25px var(--shadow-hover);
+    border-left-color: var(--yellow);
+}
+
+/* Scrollbar Styles */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--gray-light);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--gray-medium);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--crayon-pink);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    body {
+        flex-direction: column;
+    }
+    
+    aside {
+        width: 100%;
+        height: auto;
+        position: relative;
+        padding: 1.5rem;
+    }
+    
+    main {
+        width: 100%;
+        margin-left: 0;
+        padding: 1.5rem;
+    }
+    
+    #btn-container {
+        justify-content: center;
+    }
+    
+    #content-container {
+        height: auto;
+        overflow-y: visible;
+    }
+}
+
+@media (max-width: 768px) {
+    #technical-skills-sct ul ul {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+    
+    #soft-skills-sct ul {
+        grid-template-columns: 1fr;
+    }
+    
+    .tab-btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+    
+    h1 {
+        font-size: 1.8rem;
+    }
+    
+    h2 {
+        font-size: 1.4rem;
+    }
+    
+    .comp-logo {
+        height: 60px;
+    }
+}

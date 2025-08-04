@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   id="图层_1"
+   data-name="图层 1"
+   viewBox="0 0 21.000053 20.915306"
+   width="656.02698"
+   height="656.0885"
+   version="1.1"
+   sodipodi:docname="Espressif_Logo.svg"
+   inkscape:version="1.4.2 (f4327f4, 2025-05-13)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview13"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="0.23770412"
+     inkscape:cx="1388.2805"
+     inkscape:cy="822.45105"
+     inkscape:window-width="2560"
+     inkscape:window-height="1494"
+     inkscape:window-x="-11"
+     inkscape:window-y="-11"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="图层_1" />
+  <defs
+     id="defs1">
+    <style
+       id="style1">.cls-1{fill:#e7352c;}.cls-2{fill:#333;}</style>
+  </defs>
+  <title
+     id="title1">导航栏-菜单-logo</title>
+  <path
+     class="cls-1"
+     d="m 6.9300525,15.606514 a 1.48,1.48 0 1 1 -1.48,-1.48 1.48,1.48 0 0 1 1.48,1.48"
+     id="path1" />
+  <path
+     class="cls-1"
+     d="M 19.840053,14.066514 A 15.34,15.34 0 0 0 6.8400525,1.0665135 a 9.73,9.73 0 0 0 -2.15,1.55 v 1.43 A 12.18,12.18 0 0 1 16.860053,16.206514 h 1.43 a 10.25,10.25 0 0 0 1.55,-2.14"
+     id="path2" />
+  <path
+     class="cls-1"
+     d="m 21.000053,9.5765135 a 9.62,9.62 0 0 0 -9.67,-9.62 c -0.34,0 -0.67,0 -1,0.05 l -0.22,0.64 a 16.55,16.55 0 0 1 10.14,10.1300005 l 0.64,-0.23 c 0,-0.32 0.06,-0.6400005 0.06,-1.0000005"
+     id="path3" />
+  <path
+     class="cls-1"
+     d="M 11.440053,20.956514 A 11.44,11.44 0 0 1 5.2527238e-5,9.5665135 11.36,11.36 0 0 1 3.3500525,1.4765135 l 0.65,0.61 a 10.56,10.56 0 0 0 0,15.0000005 10.56,10.56 0 0 0 15.0000005,0 l 0.61,0.61 a 11.35,11.35 0 0 1 -8.17,3.26"
+     id="path4" />
+  <path
+     class="cls-1"
+     d="m 11.310053,16.866514 a 6.65,6.65 0 0 0 -2.6100005,-5.91 6.51,6.51 0 0 0 -3.35,-1.3600005 0.61,0.61 0 0 1 -0.53,-0.64 0.59,0.59 0 0 1 0.65,-0.54 7.85,7.85 0 0 1 7.0000005,8.5800005 6.85,6.85 0 0 1 -0.26,1.35 l 1.74,0.49 a 9.66,9.66 0 0 0 1.5,-0.57 10.64,10.64 0 0 0 0.19,-2.05 11,11 0 0 0 -9.3300005,-10.8600005 4.84,4.84 0 0 0 -1.75,0 3.81,3.81 0 0 0 -1.89,1.17 3.74,3.74 0 0 0 1.67,6.0000005 8.66,8.66 0 0 0 0.94,0.17 v 0 a 3.51,3.51 0 0 1 2.92,3.46 3.47,3.47 0 0 1 -0.56,1.89 l 1.2,0.77 a 8.91,8.91 0 0 0 1.8000005,0.3 6.58,6.58 0 0 0 0.66,-2.3"
+     id="path5" />
+</svg>
