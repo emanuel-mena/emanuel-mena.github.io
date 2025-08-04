@@ -33,13 +33,20 @@
     <script src="https://cdn.jsdelivr.net/npm/three-js@79.0.0/three.min.js"></script>
     <script src="js/index.js" type="module"></script>
 
-
     <title>Emanuel Mena - Software Engineer</title>
 </head>
 
 <body>
+    <!-- Mobile Menu Toggle Button -->
+    <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
+        <i class="bi bi-list"></i>
+    </button>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+
     <aside id="profile-aside">
-        <div id="pfp-container-0">
+        <div id="pfp-container">
             <img src="assets/img/profile_picture.png" alt="foto de perfil de Emanuel Mena Araya" class="pfp">
         </div>
 
@@ -84,6 +91,22 @@
                 </a>
             </li>
 
+            <li class="cv-down">
+                <a href="assets/docs/CV Emanuel Mena ES.pdf" download>
+                    <i class="bi bi-file-earmark-person-fill"></i>
+                    <i class="bi bi-filetype-pdf"></i>
+                    <p>Descarga mi CV!</p>
+                </a>
+            </li>
+
+            <li class="cv-down">
+                <a href="assets/docs/CV Emanuel Mena EN.pdf" download>
+                    <i class="bi bi-file-earmark-person-fill"></i>
+                    <i class="bi bi-filetype-pdf"></i>
+                    <p>Download my CV!</p>
+                </a>
+            </li>
+
         </ul>
     </aside>
 
@@ -102,46 +125,61 @@
         <div id="content-container">
             <section id="about-me-sct" class="tab-sct">
                 <h1>Sobre mí</h1>
-                <p>
-                    Mi nombre es <strong>Emanuel Mena Araya</strong>, estudiante de <strong>Ingeniería de
-                        Software</strong> en la <strong>Universidad CENFOTEC</strong>. A lo largo de mi formación
-                    académica y mis proyectos personales, he desarrollado una pasión firme por transformar ideas
-                    complejas en soluciones tecnológicas reales y funcionales.
-                </p>
 
-                <p>
-                    Me considero un <strong>creador multifacético</strong>, con intereses que abarcan desde el
-                    desarrollo de aplicaciones web y de escritorio hasta la programación de sistemas embebidos. Trabajo
-                    con lenguajes como <strong>Java, JavaScript, C#, Python, C y C++</strong>, y disfruto especialmente
-                    los proyectos que combinan <strong>software y hardware</strong>. Mi experiencia incluye el diseño de
-                    interfaces intuitivas, la construcción de APIs robustas, y el desarrollo con <strong>ESP32 y otros
-                        microcontroladores</strong>, utilizando herramientas como <strong>ESP-IDF, Arduino, PlatformIO,
-                        CircuitPython y MicroPython</strong>.
-                </p>
+                <div id="about-me-container">
+                    <div class="generic-gallery" id="about-me-photo">
+                        <a href="assets/img/webp_output/ttt_2024.webp">
+                            <img src="assets/img/webp_output/ttt_2024.webp" alt="Foto en evento">
+                        </a> 
+                    </div>
+                   
+                    <div id="about-me-desc">
+                        <p>
+                            Mi nombre es <strong>Emanuel Mena Araya</strong>, estudiante de <strong>Ingeniería de
+                                Software</strong> en la
+                            <strong>Universidad CENFOTEC</strong>. A lo largo de mi formación académica y proyectos
+                            personales,
+                            he desarrollado una pasión por transformar ideas complejas en soluciones tecnológicas
+                            funcionales.
+                            Me considero un <strong>creador multifacético</strong>, con intereses que abarcan desde el
+                            desarrollo de aplicaciones web y de escritorio hasta la programación de sistemas embebidos.
+                        </p>
 
-                <p>
-                    Además de mis habilidades técnicas, tengo una fuerte inclinación por la <strong>experimentación, el
-                        prototipado y el aprendizaje autodidacta</strong>. He desarrollado desde sistemas web para
-                    gestión de inversiones, hasta herramientas de red, robots autónomos y editores de código
-                    interactivos. Me entusiasma explorar nuevas tecnologías y frameworks, integrarlos en mis proyectos y
-                    compartir ese conocimiento con los demás.
-                </p>
+                        <p>
+                            Trabajo con lenguajes como <strong>Java, JavaScript, C#, Python, C y C++</strong>, y
+                            disfruto
+                            especialmente los proyectos que combinan <strong>software y hardware</strong>.
+                            Mi experiencia incluye el diseño de interfaces, APIs robustas y desarrollo con
+                            <strong>ESP32</strong> y otros microcontroladores usando <strong>ESP-IDF, Arduino,
+                                PlatformIO,
+                                CircuitPython y MicroPython</strong>.
+                        </p>
 
-                <p>
-                    Más allá del código, soy un <strong>geek orgulloso</strong>. Me apasionan los cómics, las novelas
-                    gráficas, la ciencia ficción y los videojuegos. Encuentro inspiración en mundos imaginarios y en las
-                    preguntas que despiertan sobre el futuro de la tecnología y la humanidad. Esta combinación de
-                    creatividad, curiosidad y disciplina me impulsa a abordar cada proyecto como una nueva aventura,
-                    donde el conocimiento se convierte en herramienta para construir algo significativo.
-                </p>
+                        <p>
+                            Además de mis habilidades técnicas, tengo una fuerte inclinación por la
+                            <strong>experimentación, el
+                                prototipado y el aprendizaje autodidacta</strong>.
+                            He desarrollado desde sistemas web, hasta herramientas de red y robots autónomos.
+                        </p>
 
-                <p>
-                    Si algo me define, es la <strong>constante búsqueda de mejora</strong>: mejorar mis habilidades, mis
-                    herramientas y las soluciones que diseño. Mi portafolio es solo una muestra de esa filosofía en
-                    acción, y cada línea de código que escribo refleja mi compromiso con la excelencia, la exploración y
-                    la innovación.
-                </p>
+                        <p>
+                            Más allá del código, soy un <strong>geek orgulloso</strong>: apasionado por los cómics,
+                            novelas
+                            gráficas, ciencia ficción y videojuegos. Encuentro inspiración en mundos imaginarios y en
+                            las
+                            preguntas que despiertan sobre el futuro.
+                        </p>
+
+                        <p>
+                            Si algo me define es la <strong>constante búsqueda de mejora</strong>. Cada línea de código
+                            refleja
+                            mi compromiso con la excelencia, la exploración y la innovación.
+                        </p>
+
+                    </div>
+                </div>
             </section>
+
 
 
             <section id="technical-skills-sct" class="tab-sct">
@@ -296,22 +334,27 @@
                 <ul>
                     <li>
                         <h2>Resolución de problemas complejos</h2>
+                        <img src="assets/img/webp_output/ayuda_cole_2024.webp" alt="">
                     </li>
 
                     <li>
                         <h2>Pensamiento creativo e innovación</h2>
+                        <img src="assets/img/webp_output/microbuddies.webp" alt="">
                     </li>
 
                     <li>
                         <h2>Autodidacta y aprendizaje continuo</h2>
+                        <img src="assets/img/webp_output/corte_laser.webp" alt="">
                     </li>
 
                     <li>
                         <h2>Proactividad y trabajo en equipo</h2>
+                        <img src="assets/img/webp_output/beca_buddies.webp" alt="">
                     </li>
 
                     <li>
                         <h2>Paciencia y orientación educativa</h2>
+                        <img src="assets/img/webp_output/taller_guanacaste_I.webp" alt="">
                     </li>
 
                 </ul>
@@ -415,13 +458,14 @@
 
                     <p>
                         Desde 2024 colaboro de manera activa en el desarrollo del proyecto <strong>CENFOBOT</strong> en
-                        la Universidad CENFOTEC, he hecho invesigaciones, elaborado código y apoyado en el diseño continuo y evolución del proyecto
+                        la Universidad CENFOTEC, he hecho invesigaciones, elaborado código y apoyado en el diseño
+                        continuo y evolución del proyecto
                     </p>
 
                     <p>
                         <strong>fun fact: yo hice el rediseño para la competencia del 2025!</strong>
                     </p>
-                    
+
                     <p>
                         He brindado formación y acompañamiento a estudiantes de secundaria, investigadores
                         independientes,
@@ -646,6 +690,55 @@
             </section>
         </div>
     </main>
+
+    <script>
+        // Mobile Menu JavaScript
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+            const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
+            const profileAside = document.getElementById('profile-aside');
+
+            // Toggle menu function
+            function toggleMenu() {
+                profileAside.classList.toggle('show');
+                mobileMenuOverlay.classList.toggle('show');
+                
+                // Change icon
+                const icon = mobileMenuToggle.querySelector('i');
+                if (profileAside.classList.contains('show')) {
+                    icon.classList.remove('bi-list');
+                    icon.classList.add('bi-x');
+                } else {
+                    icon.classList.remove('bi-x');
+                    icon.classList.add('bi-list');
+                }
+            }
+
+            // Event listeners
+            mobileMenuToggle.addEventListener('click', toggleMenu);
+            mobileMenuOverlay.addEventListener('click', toggleMenu);
+
+            // Close menu when clicking on a link (optional)
+            const asideLinks = profileAside.querySelectorAll('a');
+            asideLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    if (window.innerWidth <= 768) {
+                        toggleMenu();
+                    }
+                });
+            });
+
+            // Close menu when clicking on tab buttons
+            const tabButtons = document.querySelectorAll('.tab-btn');
+            tabButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    if (window.innerWidth <= 768 && profileAside.classList.contains('show')) {
+                        toggleMenu();
+                    }
+                });
+            });
+        });
+    </script>
 
 </body>
 

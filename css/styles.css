@@ -1,3 +1,6 @@
+/* =============================
+   Variables y Estilos Base
+   ============================= */
 :root {
     --yellow: #FBFF12;
     --yellow-soft: #FFF94D;
@@ -11,12 +14,79 @@
     --gray-medium: #e9ecef;
     --gray-dark: #495057;
     --gray-darker: #343a40;
-    
-    /* Gradientes sutiles */
+
     --accent-gradient: linear-gradient(135deg, var(--crayon-pink), var(--pink-soft));
     --subtle-gradient: linear-gradient(135deg, var(--white) 0%, var(--gray-light) 100%);
     --shadow-subtle: rgba(73, 80, 87, 0.08);
     --shadow-hover: rgba(73, 80, 87, 0.15);
+}
+
+/* Mobile Menu Styles */
+.mobile-menu-toggle {
+    display: none;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 1001;
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.mobile-menu-toggle:hover {
+    background-color: #555;
+}
+
+.mobile-menu-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+@media (max-width: 768px) {
+    .mobile-menu-toggle {
+        display: block;
+    }
+
+    #profile-aside {
+        position: fixed;
+        left: -100%;
+        top: 0;
+        height: 100vh;
+        width: 80%;
+        max-width: 300px;
+        background-color: #1a1a1a;
+        z-index: 1000;
+        transition: left 0.3s ease;
+        overflow-y: auto;
+    }
+
+    #profile-aside.show {
+        left: 0;
+    }
+
+    .mobile-menu-overlay.show {
+        display: block;
+    }
+
+    main {
+        margin-left: 0 !important;
+        padding-top: 60px;
+    }
+
+    #btn-container {
+        margin-top: 20px;
+    }
 }
 
 * {
@@ -25,13 +95,16 @@
     box-sizing: border-box;
 }
 
+/* =============================
+   Layout Principal
+   ============================= */
 body {
     display: flex;
     min-height: 100vh;
-    background-color: var(--white);
+    background: var(--white);
     color: var(--gray-darker);
     line-height: 1.6;
-    overflow: hidden;
+    overflow: auto;
     font-family: "Roboto", sans-serif;
 }
 
@@ -90,7 +163,16 @@ p {
     color: var(--black);
 }
 
-/* Aside Styles */
+main {
+    width: 80vw;
+    margin-left: 20vw;
+    padding: 2rem;
+    overflow: visible;
+}
+
+/* =============================
+   Aside / Barra Lateral
+   ============================= */
 aside {
     height: 100vh;
     width: 20vw;
@@ -111,27 +193,31 @@ aside p{
     color: var(--white);
 }
 
-/* Contenedor de la foto de perfil */
-#pfp-container-0 {
-    aspect-ratio: 1;
+span{
     width: 100%;
+}
+
+/* Foto de Perfil: siempre cuadrada */
+#pfp-container {
+    aspect-ratio: 1 / 1;
+    height: 20vh;
+    width: auto;
+    max-width: 200px;
     margin: 0 auto 1.5rem;
     border: 3px solid var(--tiffany-blue);
     border-radius: 50%;
     padding: 4px;
     overflow: hidden;
-    position: relative;
     box-shadow: 0 8px 25px var(--shadow-subtle);
     transition: all 0.3s ease;
 }
 
-#pfp-container-0:hover {
+#pfp-container:hover {
     transform: translateY(-2px);
     box-shadow: 0 12px 35px var(--shadow-hover);
     border-color: var(--yellow);
 }
 
-/* Estilo para la imagen de perfil */
 .pfp {
     width: 100%;
     height: 100%;
@@ -147,9 +233,13 @@ aside h1 {
 }
 
 aside h1::after {
-    background: var(--yellow);
+    content: '';
+    display: block;
+    margin: 0.25rem auto 1.5rem;
     width: 40px;
     height: 2px;
+    background: var(--yellow);
+    border-radius: 1px;
 }
 
 aside h2 {
@@ -174,18 +264,17 @@ aside ul li {
 }
 
 aside ul li a {
-    color: var(--white);
-    text-decoration: none;
     display: flex;
     align-items: center;
     padding: 0.75rem;
+    color: var(--white);
+    text-decoration: none;
     border-radius: 8px;
     transition: all 0.3s ease;
-    position: relative;
 }
 
 aside ul li a:hover {
-    background-color: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.1);
     transform: translateX(5px);
     color: var(--yellow);
 }
@@ -201,22 +290,35 @@ aside ul li a:hover i {
 }
 
 aside ul li a p {
-    margin-bottom: 0;
     font-weight: 500;
+    margin: 0;
 }
 
-/* Main Content Styles */
-main {
-    width: 80vw;
-    margin-left: 20vw;
-    padding: 2rem;
-    overflow: hidden;
+/* CV buttons */
+.cv-down {
+    background: var(--crayon-pink);
+    border-radius: 100vmax;
+    transition: background-color 0.2s ease-in-out;
 }
 
-/* Tab Buttons */
+.cv-down a,
+.cv-down p {
+    color: var(--black);
+}
+
+.cv-down:hover {
+    background: var(--tiffany-blue);
+}
+
+.cv-down:hover i,
+.cv-down:hover p {
+    color: var(--white);
+}
+
+/* =============================
+   Controles de Pestañas
+   ============================= */
 #btn-container {
-    width: 100%;
-    height: auto;
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
@@ -226,20 +328,22 @@ main {
 }
 
 .tab-btn {
+    flex: 0 0 auto;
+    white-space: nowrap;
     padding: 0.75rem 1.5rem;
-    background-color: var(--white);
+    background: var(--white);
     border: 1px solid var(--gray-medium);
     border-radius: 6px;
-    cursor: pointer;
     font-family: "Roboto", sans-serif;
     font-weight: 500;
-    transition: all 0.3s ease;
     color: var(--gray-dark);
+    cursor: pointer;
     box-shadow: 0 2px 4px var(--shadow-subtle);
+    transition: all 0.3s ease;
 }
 
 .tab-btn:hover {
-    background-color: var(--gray-light);
+    background: var(--gray-light);
     color: var(--gray-darker);
     transform: translateY(-1px);
     box-shadow: 0 4px 8px var(--shadow-hover);
@@ -252,7 +356,9 @@ main {
     box-shadow: 0 4px 12px rgba(247, 86, 124, 0.2);
 }
 
-/* Tab Content */
+/* =============================
+   Contenido de Pestañas
+   ============================= */
 #content-container {
     width: 100%;
     height: calc(90vh - 3rem);
@@ -266,119 +372,139 @@ main {
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(15px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-/* Technical Skills Section */
+/* =============================
+   Secciones Específicas…
+   ============================= */
+
+/* …About Me: imagen al lado del texto */
+#about-me-sct > div:first-child {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+#about-me-sct > div:first-child img {
+    flex: 0 0 200px;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+#about-me-desc{
+    margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+    #about-me-sct > div:first-child {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* …Technical Skills */
 #technical-skills-sct ul {
     list-style: none;
 }
-
 #technical-skills-sct ul > li {
     margin-bottom: 2rem;
 }
-
 #technical-skills-sct ul ul {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
     gap: 1.5rem;
     margin-top: 1rem;
 }
-
 #technical-skills-sct ul ul li {
     display: flex;
     flex-direction: column;
     align-items: center;
     background: var(--subtle-gradient);
     padding: 2rem 1.5rem;
-    border-radius: 12px;
-    transition: all 0.3s ease;
     border: 1px solid var(--gray-medium);
+    border-radius: 12px;
     box-shadow: 0 4px 12px var(--shadow-subtle);
+    transition: all 0.3s ease;
 }
-
 #technical-skills-sct ul ul li:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 25px var(--shadow-hover);
     border-color: var(--tiffany-blue);
 }
-
 .comp-logo {
     height: 80px;
     width: auto;
     margin-bottom: 1rem;
     transition: transform 0.3s ease;
 }
-
 #technical-skills-sct ul ul li:hover .comp-logo {
     transform: scale(1.05);
 }
 
-/* Soft Skills Section */
+/* …Soft Skills */
 #soft-skills-sct ul {
     list-style: none;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
     gap: 1.5rem;
 }
-
 #soft-skills-sct ul li {
     background: var(--subtle-gradient);
     padding: 1.5rem;
-    border-radius: 12px;
-    transition: all 0.3s ease;
     border-left: 4px solid var(--gray-medium);
+    border-radius: 12px;
     box-shadow: 0 4px 12px var(--shadow-subtle);
+    transition: all 0.3s ease;
 }
-
 #soft-skills-sct ul li:nth-child(odd) {
     border-left-color: var(--tiffany-blue);
 }
-
 #soft-skills-sct ul li:nth-child(even) {
     border-left-color: var(--yellow);
 }
-
 #soft-skills-sct ul li:hover {
-    background-color: var(--tiffany-soft);
-    color: var(--gray-darker);
+    background: var(--tiffany-soft);
     border-left-color: var(--crayon-pink);
     transform: translateX(8px);
     box-shadow: 0 8px 25px var(--shadow-hover);
 }
+#soft-skills-sct ul li img {
+    width: 70%;
+    height: auto;
+    border-radius: 5px;
+}
 
-/* Work Experience Section */
+/* …Work Experience */
 #work-experience-sct ul {
     list-style: none;
 }
-
 #work-experience-sct ul > li {
     margin-bottom: 2rem;
     padding: 1.5rem;
-    border-radius: 12px;
     background: var(--subtle-gradient);
     border-left: 4px solid var(--crayon-pink);
-    transition: all 0.3s ease;
+    border-radius: 12px;
     box-shadow: 0 4px 12px var(--shadow-subtle);
+    transition: all 0.3s ease;
 }
-
 #work-experience-sct ul > li:hover {
     transform: translateX(5px);
-    box-shadow: 0 8px 25px var(--shadow-hover);
     border-left-color: var(--yellow);
+    box-shadow: 0 8px 25px var(--shadow-hover);
 }
-
 #work-experience-sct ul ul {
     margin-top: 1rem;
     padding-left: 1.5rem;
 }
-
-#work-experience-sct ul ul li {
-    margin-bottom: 0.5rem;
-    position: relative;
-}
-
 #work-experience-sct ul ul li::before {
     content: "•";
     color: var(--crayon-pink);
@@ -389,94 +515,113 @@ main {
     font-size: 0.9rem;
 }
 
-/* Academic Formation Section */
+/* …Academic Formation */
 #academic-formation-sct > p {
     margin-bottom: 2rem;
-    padding: 0rem;
+    padding: 1rem;
     background: var(--subtle-gradient);
-    border-radius: 12px;
     border-left: 4px solid var(--tiffany-blue);
-    transition: all 0.3s ease;
+    border-radius: 12px;
     box-shadow: 0 4px 12px var(--shadow-subtle);
+    transition: all 0.3s ease;
 }
-
 #academic-formation-sct > p:hover {
     transform: translateX(5px);
-    box-shadow: 0 8px 25px var(--shadow-hover);
     border-left-color: var(--yellow);
+    box-shadow: 0 8px 25px var(--shadow-hover);
 }
 
-/* Scrollbar Styles */
+/* =============================
+   Scrollbars Personalizados
+   ============================= */
 ::-webkit-scrollbar {
     width: 8px;
 }
-
 ::-webkit-scrollbar-track {
     background: var(--gray-light);
     border-radius: 4px;
 }
-
 ::-webkit-scrollbar-thumb {
     background: var(--gray-medium);
     border-radius: 4px;
 }
-
 ::-webkit-scrollbar-thumb:hover {
     background: var(--crayon-pink);
 }
 
-/* Responsive Design */
+/* =============================
+   Diseño Responsive
+   ============================= */
 @media (max-width: 1024px) {
     body {
         flex-direction: column;
     }
-    
     aside {
         width: 100%;
         height: auto;
         position: relative;
         padding: 1.5rem;
     }
-    
     main {
         width: 100%;
         margin-left: 0;
         padding: 1.5rem;
     }
-    
     #btn-container {
         justify-content: center;
     }
-    
     #content-container {
         height: auto;
-        overflow-y: visible;
+        overflow-y: auto;
+    }
+}
+
+@media (min-width:768px) {
+    #about-me-container{
+        display: flex;
+    }
+
+    #about-me-photo{
+        margin-right: 2rem;
     }
 }
 
 @media (max-width: 768px) {
-    #technical-skills-sct ul ul {
-        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    /* Mobile menu toggle */
+    .mobile-menu-toggle {
+        display: block;
     }
-    
-    #soft-skills-sct ul {
-        grid-template-columns: 1fr;
+    .mobile-menu-overlay.show {
+        display: block;
     }
-    
+    /* Pestañas horizontales */
+    #btn-container {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    /* Ajustes de tipografía y paddings */
     .tab-btn {
         padding: 0.5rem 1rem;
         font-size: 0.9rem;
     }
-    
+    aside ul li a {
+        padding: 0.5rem;
+    }
+    aside ul li a p {
+        font-size: 0.9rem;
+    }
+    aside ul li a i {
+        font-size: 1rem;
+    }
     h1 {
         font-size: 1.8rem;
     }
-    
     h2 {
         font-size: 1.4rem;
     }
-    
-    .comp-logo {
-        height: 60px;
+
+    #about-me-photo{
+        margin-bottom: 2rem;
     }
 }
