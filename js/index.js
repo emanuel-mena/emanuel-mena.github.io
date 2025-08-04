@@ -1,5 +1,5 @@
 import {initTabs} from './TabSwitcher.js'
-import {initGallery} from './gallery.js'
+import {initGallery} from './Gallery.js'
 
 function init(){
     initTabs()
