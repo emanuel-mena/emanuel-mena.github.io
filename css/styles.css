@@ -464,6 +464,7 @@ aside ul li a p {
     border-radius: 12px;
     box-shadow: 0 4px 12px var(--shadow-subtle);
     transition: all 0.3s ease;
+    width: 80%;
 }
 #soft-skills-sct ul li:nth-child(odd) {
     border-left-color: var(--tiffany-blue);
@@ -478,7 +479,7 @@ aside ul li a p {
     box-shadow: 0 8px 25px var(--shadow-hover);
 }
 #soft-skills-sct ul li img {
-    width: 70%;
+    width: 100%;
     height: auto;
     border-radius: 5px;
 }

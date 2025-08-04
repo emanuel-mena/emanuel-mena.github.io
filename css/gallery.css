@@ -15,7 +15,7 @@
     grid-template-columns: 2fr 1fr;
     grid-template-rows: auto auto;
     gap: 20px;
-    width: 100%;
+    width: 70%;
     max-width: 100%;
 }
 
@@ -433,39 +433,6 @@
 #high-school-gallery img,
 #gallery img {
     animation: fadeInUp 0.5s ease forwards;
-}
-
-/* Indicadores sutiles para tipos de contenido */
-.generic-gallery a[href*="video"]::after,
-#gallery a[href*="video"]::after {
-    content: '▶';
-    position: absolute;
-    top: 10px; right: 10px;
-    background: rgba(247,86,124,0.9);
-    color: white;
-    width: 30px; height: 30px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 12px;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.generic-gallery a[href*="pdf"]::after,
-#gallery a[href*="pdf"]::after {
-    content: 'PDF';
-    position: absolute;
-    top: 10px; right: 10px;
-    background: rgba(153,225,217,0.9);
-    color: white;
-    padding: 4px 8px;
-    border-radius: 4px;
-    font-size: 10px;
-    font-weight: 600;
-    opacity: 0;
-    transition: opacity 0.3s ease;
 }
 
 .generic-gallery a:hover::after,
